@@ -1,0 +1,30 @@
+{
+  "name": "ngx-jsoneditor",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devmark/ngx-jsoneditor"
+  },
+  "author": {
+    "name": "DevMark",
+    "email": "hc.devmark@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devmark/ngx-jsoneditor/issues"
+  },
+  "module": "ngx-jsoneditor.js",
+  "typings": "ngx-jsoneditor.d.ts",
+  "dependencies": {
+    "jsoneditor": "^5.6.0",
+    "lodash": "^4.17.4"
+  },
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
