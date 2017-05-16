@@ -6,7 +6,7 @@ import {NG_VALUE_ACCESSOR} from '@angular/forms';
 import {JSONEditorOptions, JSONEditorMode} from 'jsoneditor';
 import * as _ from 'lodash';
 
-declare var JSONEditor:any;
+declare var JSONEditor: any;
 
 /**
  * JSONEditor component
@@ -67,8 +67,10 @@ export class JSONEditorComponent implements AfterViewInit, OnDestroy {
         const self = this;
         let defaultConfig: any = {
             onChange: function () {
-                const value = self.instance.get();
-                self.updateValue(value);
+                if (self.instance) {
+                    const value = self.instance.get();
+                    self.updateValue(value);
+                }
             },
         };
 
@@ -108,7 +110,9 @@ export class JSONEditorComponent implements AfterViewInit, OnDestroy {
             this.onChange(value);
 
             this.onTouched();
-            this.change.emit(value);
+            if (this.instance) {
+                this.change.emit(value);
+            }
         });
     }
 

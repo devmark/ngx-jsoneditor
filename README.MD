@@ -55,14 +55,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'sample',
   template: `
-  <jsoneditor
+  <json-editor
     [(ngModel)]="jsonContent"
     jsonModal #staticModal="json-modal"
     [config]="{sortObjectKeys: true}"
-    (change)="onChange($event)"
-    (error)="onError($event)"
-    (editable)="onEditable($event)">
-  </jsoneditor>
+    (change)="onChange($event)">
+  </json-editor>
 
     <button (click)="staticModal.collapseAll()">collapseAll</button>
     <button (click)="staticModal.expandAll()">expandAll</button>
@@ -78,6 +76,9 @@ export class Sample{
         "Object": {"a": "b", "c": "d"},
         "String": "Hello World"
     };
+  }
+  onChange(value){
+      
   }
 }
 ```
