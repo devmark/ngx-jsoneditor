@@ -15,7 +15,7 @@ import {JSONEditorComponent} from './jsoneditor.component';
     ]
 })
 export class JSONEditorModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<any> {
         return {
             ngModule: JSONEditorModule,
         };
